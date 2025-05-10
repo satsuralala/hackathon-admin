@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
-export const ApiWrapper = (handler: (req: Request) => any) => {
-  return async (req: Request) => {
+export const ApiWrapper = (
+  handler: (req: Request, context: { params: any }) => Promise<Response>
+) => {
+  return async (req: Request, context: { params: any }) => {
     await connectDB();
-    const response = await handler(req);
+    const response = await handler(req, context);
     return response;
   };
 };

@@ -7,4 +7,5 @@ const categorySchema = new Schema({
   createdAt: { type: Date, default: new Date() },
 });
 
-export const CategoryModel = models.report || model("category", categorySchema);
+export const CategoryModel =
+  models.category || model("category", categorySchema);

@@ -58,6 +58,7 @@ import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import AdminLogin from "./login";
 import { Label } from "@/components/ui/label";
+import CategoryList from "./category/categoryList";
 
 export default function AdminDashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -946,7 +947,7 @@ export default function AdminDashboard() {
           )}
 
           {/* Categories Tab */}
-          {activeTab === "categories" && (
+          {/* {activeTab === "categories" && (
             <div className="grid gap-6">
               <Card>
                 <CardHeader className="flex flex-row items-center">
@@ -1044,6 +1045,8 @@ export default function AdminDashboard() {
               </Card>
             </div>
           )}
+           */}
+          {activeTab === "categories" && <CategoryList />}
 
           {/* Messages Tab */}
           {activeTab === "messages" && (

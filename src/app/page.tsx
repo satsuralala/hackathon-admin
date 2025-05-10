@@ -1,5 +1,5 @@
-import LandingPage from "@/components/landing";
+import AdminDashboard from "@/components/dashboard";
 
-export default function Page() {
-  return <LandingPage />;
+export default function AdminPage() {
+  return <AdminDashboard />;
 }
